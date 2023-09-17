@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'calibri';
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    height: 145px;
+    width: 100%;
+    display: flex;
+    /* align-items:center; */
+    padding: 15px 50px;
+    justify-content: flex-start ;
+    position: absolute;
+    z-index: 99;
+}
+#nav img{
+    height: 180px;
+    width: 180px;
+}
+
+
+#main{
+    position: relative;
+}
+#page1{
+    height: 20vh;
+    width: 100%;
+    position: relative;
+
+}
+#page1>img{
+    height: 130%;
+    width: 80%;
+    transform: translateX(25%);
+    /* object-fit: cover; */
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#page2{
+    min-height: 300vh;
+    width: 100%;
+    z-index: 10;
+    /* background-color: #ffecec; */
+}
+#scroller{
+    margin-top: 2%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline-block;
+    font-size: 90px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 10px;
+    transition:all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    color: #1D1D1F;
+    text-shadow: 2px 2px 8px #FF0000;
+}
+#scroller h5{
+    display: inline-block;
+    font-size: 90px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 10px;
+    transition:all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #1D1D1F;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 8px #FF0000;
+}
+/* #scroller h4:hover{
+    color: #95c11e;
+} */
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#page2 center h1{
+    font-size: 100px;
+    margin: 40px;
+    color: #a91919;
+}
+#cards-container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
+.card{
+    height:115%;
+    width:22%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    margin-bottom: 20px;
+}
+#card1{
+    background-image: url(product_images/electronic_itemes1.jpg);
+}
+#card2{
+    background-image: url(product_images/electronic_itemes4.jpg);
+}
+#card3{
+    background-image: url(product_images/electronic_itemes3.jpg);
+}
+#card4{
+    background-image: url(product_images/electronic_itemes5.jpg);
+}
+#card5{
+    background-image: url(product_images/electronic_itemes2.jpg);
+}
+#card6{
+    background-image: url(product_images/electronic_itemes6.jpg);
+}
+#card7{
+    background-image: url(product_images/electronic_itemes7.jpg);
+}
+#card8{
+    background-image: url(product_images/electronic_itemes8.jpg);
+}
+#card9{
+    background-image: url(product_images/electronic_itemes9.jpg);
+}
+#footer{
+    position: relative;
+    display: flex;
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#fc40ef,#a91919,#009e8b);
+
+}
+.left-footer{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    /* background-color: red; */
+}
+.left-footer>img{
+    height: 13rem;
+    position: absolute;
+    font-size: 2.4vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 16%;
+}
+.right-footer{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+    padding-left:5vw ;
+    padding: 10px;
+    /* background-color: blue; */
+}
+.right-footer>h2{
+    color: #c6c6c6;
+    font-size: 1.2vw;
+    font-weight: 550;
+}
